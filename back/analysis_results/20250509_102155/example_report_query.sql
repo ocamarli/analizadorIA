@@ -1,0 +1,1 @@
+SELECT NumPedido, TipoPedido, SurtirFinal, PorcentajeAjustar, RegionMas, RegionMenos, AjustePrepack, AjusteFinalPrepack FROM RptDistribucionesPrepack;

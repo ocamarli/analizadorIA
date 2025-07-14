@@ -1,0 +1,16 @@
+## Legacy System Integration Plan
+
+### Objective:
+Ensure seamless handling of returns processed in legacy systems.
+
+### Steps:
+1. Identify all legacy systems involved in returns.
+2. Develop APIs to fetch return data from legacy systems.
+3. Implement a fallback mechanism to redirect users to legacy systems when required.
+4. Provide training to operators on handling legacy system returns.
+
+### Example API Endpoint:
+`GET /legacy-returns/{returnId}`
+
+### Error Handling:
+- If legacy system is unavailable, show a message: 'Legacy system is currently unavailable. Please try again later.'

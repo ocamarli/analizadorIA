@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0" version="24.7.7">
+  <diagram name="Azure-Sales-Architecture" id="azure-sales-arch">
+    <mxGraphModel dx="2074" dy="1124" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        
+        <!-- Azure Region Container -->
+        <mxCell id="azure-region" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#0078D4;strokeWidth=2;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="80" y="80" width="1440" height="740" as="geometry" />
+        </mxCell>
+        
+        <!-- Region Title -->
+        <mxCell id="region-title" value="&lt;b&gt;&lt;font style=&quot;font-size: 16px;&quot; color=&quot;#0078D4&quot;&gt;Azure Region: Central US&lt;/font&gt;&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="100" y="90" width="300" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- Virtual Network -->
+        <mxCell id="vnet" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#0078D4;strokeWidth=2;dashed=1;dashPattern=8 8;" parent="1" vertex="1">
+          <mxGeometry x="120" y="140" width="1360" height="640" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="vnet-label" value="&lt;b&gt;Virtual Network (VNet)&lt;/b&gt;&lt;br&gt;10.0.0.0/16" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="140" y="150" width="200" height="30" as="geometry" />
+        </mxCell>
+        
+        <!-- AKS Cluster -->
+        <mxCell id="aks-cluster" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=#0078D4;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="160" y="200" width="800" height="520" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="aks-icon" value="" style="shape=image;verticalLabelPosition=bottom;labelBackgroundColor=default;verticalAlign=top;aspect=fixed;imageAspect=0;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MCA1MCI+PGRlZnM+PHN0eWxlPi5jbHMtMXtmaWxsOiMwMDc4ZDQ7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5Db250YWluZXJJbnN0YW5jZXM8L3RpdGxlPjxnIGlkPSJMYXllcl8yIiBkYXRhLW5hbWU9IkxheWVyIDIiPjxnIGlkPSJMYXllcl8xLTIiIGRhdGEtbmFtZT0iTGF5ZXIgMSI+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMjUsNDUuNDNsLTE5LTExVjE1LjU3bDE5LTExLDE5LDExVjM0LjQzWiIvPjwvZz48L2c+PC9zdmc+;" parent="1" vertex="1">
+          <mxGeometry x="170" y="210" width="40" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="aks-label" value="&lt;b&gt;Azure Kubernetes Service (AKS)&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="220" y="220" width="250" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Node Pool -->
+        <mxCell id="node-pool" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F0F0F0;strokeColor=#666666;strokeWidth=1;dashed=1;" parent="1" vertex="1">
+          <mxGeometry x="200" y="260" width="720" height="420" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="node-label" value="Node Pool (3 nodes)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="210" y="265" width="150" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- Frontend Pod -->
+        <mxCell id="frontend-pod" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="240" y="300" width="160" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="frontend-icon" value="🌐" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="250" y="310" width="40" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="frontend-label" value="&lt;b&gt;Frontend&lt;/b&gt;&lt;br&gt;React App&lt;br&gt;Pod" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="290" y="320" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Microservice 1 - Orders -->
+        <mxCell id="ms1-pod" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FF9800;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="240" y="420" width="160" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ms1-icon" value="📦" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="250" y="430" width="40" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ms1-label" value="&lt;b&gt;Orders Service&lt;/b&gt;&lt;br&gt;.NET Core API&lt;br&gt;Pod" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="290" y="440" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Microservice 2 - Products -->
+        <mxCell id="ms2-pod" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FF9800;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="480" y="420" width="160" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ms2-icon" value="📋" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="490" y="430" width="40" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ms2-label" value="&lt;b&gt;Products Service&lt;/b&gt;&lt;br&gt;.NET Core API&lt;br&gt;Pod" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="530" y="440" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Microservice 3 - Payments -->
+        <mxCell id="ms3-pod" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#FF9800;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="720" y="420" width="160" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ms3-icon" value="💳" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="730" y="430" width="40" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ms3-label" value="&lt;b&gt;Payments Service&lt;/b&gt;&lt;br&gt;.NET Core API&lt;br&gt;Pod" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="770" y="440" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Ingress Controller -->
+        <mxCell id="ingress" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5FE;strokeColor=#0288D1;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="480" y="300" width="160" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ingress-icon" value="🔀" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="490" y="310" width="40" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="ingress-label" value="&lt;b&gt;Ingress Controller&lt;/b&gt;&lt;br&gt;NGINX&lt;br&gt;Load Balancer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="530" y="320" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Service Mesh -->
+        <mxCell id="service-mesh" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F3E5F5;strokeColor=#9C27B0;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="720" y="300" width="160" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="mesh-icon" value="🕸️" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="730" y="310" width="40" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="mesh-label" value="&lt;b&gt;Service Mesh&lt;/b&gt;&lt;br&gt;Istio/Linkerd&lt;br&gt;Observability" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="770" y="320" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Cosmos DB -->
+        <mxCell id="cosmos-db" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8EAF6;strokeColor=#3F51B5;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1040" y="380" width="180" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cosmos-icon" value="🌍" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;" parent="1" vertex="1">
+          <mxGeometry x="1050" y="390" width="50" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="cosmos-label" value="&lt;b&gt;Azure Cosmos DB&lt;/b&gt;&lt;br&gt;Multi-model Database&lt;br&gt;Global Distribution" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="410" width="110" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Azure Monitor -->
+        <mxCell id="monitor" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E9;strokeColor=#4CAF50;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1040" y="520" width="180" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="monitor-icon" value="📊" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;" parent="1" vertex="1">
+          <mxGeometry x="1050" y="530" width="50" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="monitor-label" value="&lt;b&gt;Azure Monitor&lt;/b&gt;&lt;br&gt;Logs &amp; Metrics&lt;br&gt;Application Insights" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="540" width="110" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Azure Key Vault -->
+        <mxCell id="keyvault" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF8E1;strokeColor=#F57C00;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1040" y="240" width="180" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="keyvault-icon" value="🔐" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;" parent="1" vertex="1">
+          <mxGeometry x="1050" y="250" width="50" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="keyvault-label" value="&lt;b&gt;Azure Key Vault&lt;/b&gt;&lt;br&gt;Secrets Management&lt;br&gt;Certificates" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1100" y="260" width="110" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Azure Container Registry -->
+        <mxCell id="acr" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E3F2FD;strokeColor=#1976D2;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="1280" y="380" width="160" height="100" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="acr-icon" value="📦" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;" parent="1" vertex="1">
+          <mxGeometry x="1290" y="390" width="50" height="50" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="acr-label" value="&lt;b&gt;Azure Container&lt;br&gt;Registry&lt;/b&gt;&lt;br&gt;Docker Images" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1340" y="410" width="90" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- API Management -->
+        <mxCell id="apim" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FCE4EC;strokeColor=#C2185B;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="480" y="560" width="160" height="80" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="apim-icon" value="🔌" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
+          <mxGeometry x="490" y="570" width="40" height="40" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="apim-label" value="&lt;b&gt;API Management&lt;/b&gt;&lt;br&gt;Gateway&lt;br&gt;Rate Limiting" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="530" y="580" width="100" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- Connections -->
+        <!-- Frontend to Ingress -->
+        <mxCell id="conn1" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#0078D4;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="340" as="sourcePoint" />
+            <mxPoint x="480" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Ingress to Microservices -->
+        <mxCell id="conn2" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#0078D4;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="380" as="sourcePoint" />
+            <mxPoint x="320" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn3" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#0078D4;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="380" as="sourcePoint" />
+            <mxPoint x="560" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn4" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#0078D4;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="560" y="380" as="sourcePoint" />
+            <mxPoint x="800" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Microservices to Cosmos DB -->
+        <mxCell id="conn5" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#3F51B5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ms1-pod" target="cosmos-db" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="460" as="sourcePoint" />
+            <mxPoint x="950" y="410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn6" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#3F51B5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="ms2-pod" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="460" as="sourcePoint" />
+            <mxPoint x="1040" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="conn7" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#3F51B5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="ms3-pod" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="460" as="sourcePoint" />
+            <mxPoint x="1040" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- AKS to Key Vault -->
+        <mxCell id="conn8" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#F57C00;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="aks-cluster" target="keyvault" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="300" as="sourcePoint" />
+            <mxPoint x="950" y="250" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="560" y="180" />
+              <mxPoint x="1000" y="180" />
+              <mxPoint x="1000" y="280" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- AKS to Monitor -->
+        <mxCell id="conn9" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#4CAF50;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="aks-cluster" target="monitor" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="600" as="sourcePoint" />
+            <mxPoint x="950" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- AKS to ACR -->
+        <mxCell id="conn10" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#1976D2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;" parent="1" source="aks-cluster" target="acr" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="900" y="460" as="sourcePoint" />
+            <mxPoint x="950" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1120" y="460" />
+              <mxPoint x="1120" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- External Users -->
+        <mxCell id="users" value="👥" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=48;" parent="1" vertex="1">
+          <mxGeometry x="40" y="320" width="60" height="60" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="users-label" value="&lt;b&gt;Users&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="40" y="380" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- User to Frontend -->
+        <mxCell id="conn11" value="HTTPS" style="endArrow=classic;html=1;strokeWidth=3;strokeColor=#0078D4;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="frontend-pod" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="100" y="340" as="sourcePoint" />
+            <mxPoint x="200" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Labels for connections -->
+        <mxCell id="label1" value="Secrets" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="940" y="220" width="60" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="label2" value="Logs/Metrics" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="970" y="560" width="70" height="20" as="geometry" />
+        </mxCell>
+        
+        <mxCell id="label3" value="Pull Images" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=2" parent="1" vertex="1">
+          <mxGeometry x="1140" y="440" width="70" height="20" as="geometry" />
+        </mxCell>
+        
+        <!-- External API -->
+        <mxCell id="ext-api" value="🌐 External APIs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E0E0E0;strokeColor=#616161;strokeWidth=2;" parent="1" vertex="1">
+          <mxGeometry x="280" y="740" width="120" height="40" as="geometry" />
+        </mxCell>
+        
+        <!-- API Management to External -->
+        <mxCell id="conn12" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#C2185B;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="apim" edge="1">
+  <mxGeometry width="50" height="50" relative="1" as="geometry">
+           <mxPoint x="560" y="700" as="sourcePoint" />
+           <mxPoint x="400" y="760" as="targetPoint" />
+           <Array as="points">
+             <mxPoint x="560" y="760" />
+           </Array>
+         </mxGeometry>
+       </mxCell>
+       
+       <!-- Azure Active Directory -->
+       <mxCell id="aad" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#D32F2F;strokeWidth=2;" parent="1" vertex="1">
+         <mxGeometry x="1280" y="240" width="160" height="80" as="geometry" />
+       </mxCell>
+       
+       <mxCell id="aad-icon" value="🔑" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;" parent="1" vertex="1">
+         <mxGeometry x="1290" y="250" width="50" height="40" as="geometry" />
+       </mxCell>
+       
+       <mxCell id="aad-label" value="&lt;b&gt;Azure AD&lt;/b&gt;&lt;br&gt;Authentication&lt;br&gt;Authorization" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+         <mxGeometry x="1340" y="260" width="90" height="40" as="geometry" />
+       </mxCell>
+       
+       <!-- AAD Connection -->
+       <mxCell id="conn13" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#D32F2F;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="keyvault" target="aad" edge="1">
+         <mxGeometry width="50" height="50" relative="1" as="geometry">
+           <mxPoint x="1220" y="280" as="sourcePoint" />
+           <mxPoint x="1270" y="280" as="targetPoint" />
+         </mxGeometry>
+       </mxCell>
+       
+       <!-- Redis Cache -->
+       <mxCell id="redis" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFECB3;strokeColor=#FF6F00;strokeWidth=2;" parent="1" vertex="1">
+         <mxGeometry x="1280" y="520" width="160" height="80" as="geometry" />
+       </mxCell>
+       
+       <mxCell id="redis-icon" value="⚡" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=32;" parent="1" vertex="1">
+         <mxGeometry x="1290" y="530" width="50" height="40" as="geometry" />
+       </mxCell>
+       
+       <mxCell id="redis-label" value="&lt;b&gt;Azure Cache&lt;br&gt;for Redis&lt;/b&gt;&lt;br&gt;Session Cache" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+         <mxGeometry x="1340" y="540" width="90" height="40" as="geometry" />
+       </mxCell>
+       
+       <!-- Service Bus -->
+       <mxCell id="servicebus" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1BEE7;strokeColor=#7B1FA2;strokeWidth=2;" parent="1" vertex="1">
+         <mxGeometry x="720" y="560" width="160" height="80" as="geometry" />
+       </mxCell>
+       
+       <mxCell id="servicebus-icon" value="📨" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=24;" parent="1" vertex="1">
+         <mxGeometry x="730" y="570" width="40" height="40" as="geometry" />
+       </mxCell>
+       
+       <mxCell id="servicebus-label" value="&lt;b&gt;Service Bus&lt;/b&gt;&lt;br&gt;Message Queue&lt;br&gt;Event Driven" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+         <mxGeometry x="770" y="580" width="100" height="40" as="geometry" />
+       </mxCell>
+       
+       <!-- Microservices to Service Bus -->
+       <mxCell id="conn14" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#7B1FA2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="ms3-pod" target="servicebus" edge="1">
+         <mxGeometry width="50" height="50" relative="1" as="geometry">
+           <mxPoint x="800" y="520" as="sourcePoint" />
+           <mxPoint x="800" y="560" as="targetPoint" />
+         </mxGeometry>
+       </mxCell>
+       
+       <!-- Microservices to Redis -->
+       <mxCell id="conn15" value="" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#FF6F00;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="ms2-pod" target="redis" edge="1">
+         <mxGeometry width="50" height="50" relative="1" as="geometry">
+           <mxPoint x="900" y="560" as="sourcePoint" />
+           <mxPoint x="950" y="560" as="targetPoint" />
+           <Array as="points">
+             <mxPoint x="1000" y="480" />
+             <mxPoint x="1000" y="560" />
+           </Array>
+         </mxGeometry>
+       </mxCell>
+       
+       <!-- Title -->
+       <mxCell id="title" value="&lt;h1&gt;Sistema de Ventas - Arquitectura Azure&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+         <mxGeometry x="480" y="20" width="640" height="40" as="geometry" />
+       </mxCell>
+       
+       <!-- Legend -->
+       <mxCell id="legend-box" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#F5F5F5;strokeColor=#666666;strokeWidth=1;" parent="1" vertex="1">
+         <mxGeometry x="40" y="480" width="120" height="200" as="geometry" />
+       </mxCell>
+       
+       <mxCell id="legend-title" value="&lt;b&gt;Leyenda&lt;/b&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+         <mxGeometry x="40" y="485" width="120" height="20" as="geometry" />
+       </mxCell>
+       
+       <mxCell id="legend-1" value="━━ Tráfico HTTP/S" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+         <mxGeometry x="50" y="510" width="100" height="20" as="geometry" />
+       </mxCell>
+       
+       <mxCell id="legend-2" value="━━ Base de Datos" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#3F51B5;" parent="1" vertex="1">
+         <mxGeometry x="50" y="530" width="100" height="20" as="geometry" />
+       </mxCell>
+       
+       <mxCell id="legend-3" value="━━ Monitoreo" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#4CAF50;" parent="1" vertex="1">
+         <mxGeometry x="50" y="550" width="100" height="20" as="geometry" />
+       </mxCell>
+       
+       <mxCell id="legend-4" value="━━ Seguridad" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;fontColor=#F57C00;" parent="1" vertex="1">
+         <mxGeometry x="50" y="570" width="100" height="20" as="geometry" />
+       </mxCell>
+       
+       <mxCell id="legend-5" value="┅┅ Pull Images" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="1" vertex="1">
+         <mxGeometry x="50" y="590" width="100" height="20" as="geometry" />
+       </mxCell>
+       
+     </root>
+   </mxGraphModel>
+ </diagram>
+</mxfile>

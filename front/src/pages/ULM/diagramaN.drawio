@@ -1,0 +1,248 @@
+<mxfile host="app.diagrams.net" modified="2024-06-01T12:00:00.000Z" agent="5.0 (Windows)" etag="123456789" version="20.1.5" type="device">
+  <diagram id="diagram-sequence-pharma" name="Diagrama de Secuencia - Compra Farmacéutica">
+    <mxGraphModel dx="1424" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Actores y Componentes -->
+        <!-- Cliente -->
+        <mxCell id="actor-cliente" value="Cliente" style="shape=actor;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="40" height="80" as="geometry"/>
+        </mxCell>
+        <!-- Lifeline Cliente -->
+        <mxCell id="lifeline-cliente" style="shape=line;strokeColor=#b85450;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="120" width="1" height="700" as="geometry"/>
+        </mxCell>
+
+        <!-- Sistema de Ventas -->
+        <mxCell id="sistema-ventas" value="Sistema de Ventas" style="rounded=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="180" y="40" width="140" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Lifeline Sistema de Ventas -->
+        <mxCell id="lifeline-sistema-ventas" style="shape=line;strokeColor=#d79b00;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="100" width="1" height="720" as="geometry"/>
+        </mxCell>
+
+        <!-- Microservicio de Productos -->
+        <mxCell id="microservicio-productos" value="Microservicio de Productos" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="340" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Lifeline Microservicio de Productos -->
+        <mxCell id="lifeline-microservicio-productos" style="shape=line;strokeColor=#6c8ebf;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="100" width="1" height="720" as="geometry"/>
+        </mxCell>
+
+        <!-- Base de Datos MongoDB -->
+        <mxCell id="bd-mongodb" value="Base de Datos MongoDB" style="rounded=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="520" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Lifeline Base de Datos MongoDB -->
+        <mxCell id="lifeline-bd-mongodb" style="shape=line;strokeColor=#9673a6;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="100" width="1" height="720" as="geometry"/>
+        </mxCell>
+
+        <!-- Microservicio de Órdenes -->
+        <mxCell id="microservicio-ordenes" value="Microservicio de Órdenes" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="680" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Lifeline Microservicio de Órdenes -->
+        <mxCell id="lifeline-microservicio-ordenes" style="shape=line;strokeColor=#6c8ebf;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="100" width="1" height="720" as="geometry"/>
+        </mxCell>
+
+        <!-- Microservicio de Pagos -->
+        <mxCell id="microservicio-pagos" value="Microservicio de Pagos" style="rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=12;fontColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="840" y="40" width="160" height="60" as="geometry"/>
+        </mxCell>
+        <!-- Lifeline Microservicio de Pagos -->
+        <mxCell id="lifeline-microservicio-pagos" style="shape=line;strokeColor=#6c8ebf;dashed=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="100" width="1" height="720" as="geometry"/>
+        </mxCell>
+
+        <!-- Activations y Mensajes -->
+
+        <!-- 1. Cliente -> Sistema de Ventas: seleccionarProducto(idProducto) -->
+        <mxCell id="msg1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor-cliente" target="sistema-ventas">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Activación Sistema de Ventas -->
+        <mxCell id="activation-sistema-ventas-1" style="shape=rectangle;rounded=0;fillColor=#fff2cc;strokeColor=#d79b00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="230" y="100" width="20" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- 2. Sistema de Ventas -> Microservicio de Productos: consultarProducto(idProducto) -->
+        <mxCell id="msg2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="sistema-ventas" target="microservicio-productos">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Activación Microservicio de Productos -->
+        <mxCell id="activation-microservicio-productos-1" style="shape=rectangle;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="410" y="100" width="20" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- 3. Microservicio de Productos -> Base de Datos MongoDB: buscarProducto(id) -->
+        <mxCell id="msg3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="microservicio-productos" target="bd-mongodb">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Activación Base de Datos MongoDB -->
+        <mxCell id="activation-bd-mongodb-1" style="shape=rectangle;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="590" y="100" width="20" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- 4. Base de Datos MongoDB -> Microservicio de Productos: return datosProducto -->
+        <mxCell id="msg4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=block;startFill=1;fontSize=11;" edge="1" parent="1" source="bd-mongodb" target="microservicio-productos">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Fin Activación Base de Datos MongoDB -->
+        <mxCell id="activation-bd-mongodb-1-end" style="shape=rectangle;rounded=0;fillColor=none;strokeColor=none;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="180" width="20" height="0" as="geometry"/>
+        </mxCell>
+
+        <!-- 5. Microservicio de Productos -> Sistema de Ventas: return infoProducto -->
+        <mxCell id="msg5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=block;startFill=1;fontSize=11;" edge="1" parent="1" source="microservicio-productos" target="sistema-ventas">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Fin Activación Microservicio de Productos -->
+        <mxCell id="activation-microservicio-productos-1-end" style="shape=rectangle;rounded=0;fillColor=none;strokeColor=none;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="410" y="180" width="20" height="0" as="geometry"/>
+        </mxCell>
+
+        <!-- Alt: Error Producto No Encontrado -->
+        <mxCell id="alt-error-producto" style="rounded=1;dashed=1;strokeColor=#b85450;fontColor=#b85450;fontSize=12;align=left;verticalAlign=top;labelBackgroundColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="180" y="180" width="320" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="alt-error-producto-label" value="alt: Producto encontrado / Producto no encontrado" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#b85450;" vertex="1" parent="alt-error-producto">
+          <mxGeometry x="5" y="5" width="310" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- 5a.1. Producto no encontrado: Microservicio de Productos -> Sistema de Ventas: mensajeErrorProductoNoEncontrado -->
+        <mxCell id="msg5a1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;startArrow=block;startFill=1;fontSize=11;" edge="1" parent="alt-error-producto" source="microservicio-productos" target="sistema-ventas">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- 5a.2. Sistema de Ventas -> Cliente: mensajeErrorProductoNoEncontrado -->
+        <mxCell id="msg5a2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="alt-error-producto" source="sistema-ventas" target="actor-cliente">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- 6. Cliente -> Sistema de Ventas: agregarProductoCarrito(infoProducto) -->
+        <mxCell id="msg6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor-cliente" target="sistema-ventas">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Activación Sistema de Ventas -->
+        <mxCell id="activation-sistema-ventas-2" style="shape=rectangle;rounded=0;fillColor=#fff2cc;strokeColor=#d79b00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="230" y="260" width="20" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- 7. Sistema de Ventas -> Microservicio de Órdenes: crearOrden(infoProducto) -->
+        <mxCell id="msg7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="sistema-ventas" target="microservicio-ordenes">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Activación Microservicio de Órdenes -->
+        <mxCell id="activation-microservicio-ordenes-1" style="shape=rectangle;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="750" y="260" width="20" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- 8. Microservicio de Órdenes -> Base de Datos MongoDB: guardarOrden(nuevaOrden) -->
+        <mxCell id="msg8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="microservicio-ordenes" target="bd-mongodb">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Activación Base de Datos MongoDB -->
+        <mxCell id="activation-bd-mongodb-2" style="shape=rectangle;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="590" y="260" width="20" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- 9. Base de Datos MongoDB -> Microservicio de Órdenes: confirmaciónOrden -->
+        <mxCell id="msg9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=block;startFill=1;fontSize=11;" edge="1" parent="1" source="bd-mongodb" target="microservicio-ordenes">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Fin Activación Base de Datos MongoDB -->
+        <mxCell id="activation-bd-mongodb-2-end" style="shape=rectangle;rounded=0;fillColor=none;strokeColor=none;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="340" width="20" height="0" as="geometry"/>
+        </mxCell>
+
+        <!-- 10. Microservicio de Órdenes -> Sistema de Ventas: return ordenCreada -->
+        <mxCell id="msg10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=block;startFill=1;fontSize=11;" edge="1" parent="1" source="microservicio-ordenes" target="sistema-ventas">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Fin Activación Microservicio de Órdenes -->
+        <mxCell id="activation-microservicio-ordenes-1-end" style="shape=rectangle;rounded=0;fillColor=none;strokeColor=none;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="750" y="340" width="20" height="0" as="geometry"/>
+        </mxCell>
+
+        <!-- 11. Cliente -> Sistema de Ventas: realizarPago(datosPago) -->
+        <mxCell id="msg11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="actor-cliente" target="sistema-ventas">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Activación Sistema de Ventas -->
+        <mxCell id="activation-sistema-ventas-3" style="shape=rectangle;rounded=0;fillColor=#fff2cc;strokeColor=#d79b00;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="230" y="380" width="20" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- 12. Sistema de Ventas -> Microservicio de Pagos: procesarPago(datosPago) -->
+        <mxCell id="msg12" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="sistema-ventas" target="microservicio-pagos">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Activación Microservicio de Pagos -->
+        <mxCell id="activation-microservicio-pagos-1" style="shape=rectangle;rounded=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="910" y="380" width="20" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- 13. Microservicio de Pagos -> Base de Datos MongoDB: registrarPago(pago) -->
+        <mxCell id="msg13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="1" source="microservicio-pagos" target="bd-mongodb">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Activación Base de Datos MongoDB -->
+        <mxCell id="activation-bd-mongodb-3" style="shape=rectangle;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="590" y="380" width="20" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- 14. Base de Datos MongoDB -> Microservicio de Pagos: confirmaciónPago -->
+        <mxCell id="msg14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=block;startFill=1;fontSize=11;" edge="1" parent="1" source="bd-mongodb" target="microservicio-pagos">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Fin Activación Base de Datos MongoDB -->
+        <mxCell id="activation-bd-mongodb-3-end" style="shape=rectangle;rounded=0;fillColor=none;strokeColor=none;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="590" y="460" width="20" height="0" as="geometry"/>
+        </mxCell>
+
+        <!-- Alt: Error en Procesamiento de Pago -->
+        <mxCell id="alt-error-pago" style="rounded=1;dashed=1;strokeColor=#b85450;fontColor=#b85450;fontSize=12;align=left;verticalAlign=top;labelBackgroundColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="840" y="480" width="320" height="80" as="geometry"/>
+        </mxCell>
+        <mxCell id="alt-error-pago-label" value="alt: Pago exitoso / Error en pago" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#b85450;" vertex="1" parent="alt-error-pago">
+          <mxGeometry x="5" y="5" width="310" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- 15a.1. Error en pago: Microservicio de Pagos -> Sistema de Ventas: mensajeErrorPago -->
+        <mxCell id="msg15a1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;startArrow=block;startFill=1;fontSize=11;" edge="1" parent="alt-error-pago" source="microservicio-pagos" target="sistema-ventas">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- 15a.2. Sistema de Ventas -> Cliente: mensajeErrorPago -->
+        <mxCell id="msg15a2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;endArrow=block;endFill=1;fontSize=11;" edge="1" parent="alt-error-pago" source="sistema-ventas" target="actor-cliente">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- 15b. Pago exitoso: Microservicio de Pagos -> Sistema de Ventas: return resultadoPago -->
+        <mxCell id="msg15b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=block;startFill=1;fontSize=11;" edge="1" parent="alt-error-pago" source="microservicio-pagos" target="sistema-ventas">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Fin Activación Microservicio de Pagos -->
+        <mxCell id="activation-microservicio-pagos-1-end" style="shape=rectangle;rounded=0;fillColor=none;strokeColor=none;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="910" y="480" width="20" height="0" as="geometry"/>
+        </mxCell>
+
+        <!-- 16. Sistema de Ventas -> Cliente: return confirmaciónCompra -->
+        <mxCell id="msg16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#000000;startArrow=block;startFill=1;fontSize=11;" edge="1" parent="1" source="sistema-ventas" target="actor-cliente">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Fin Activación Sistema de Ventas -->
+        <mxCell id="activation-sistema-ventas-3-end" style="shape=rectangle;rounded=0;fillColor=none;strokeColor=none;strokeWidth=0;" vertex="1" parent="1">
+          <mxGeometry x="230" y="440" width="20" height="0" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

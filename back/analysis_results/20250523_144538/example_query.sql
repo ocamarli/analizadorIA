@@ -1,0 +1,1 @@
+SELECT SUM(amount) AS tradein_total FROM transactions WHERE type = 'TRADEIN';

@@ -1,0 +1,3 @@
+TRADEIN Report - Date: {date}
+Total Amount: {total_amount}
+...

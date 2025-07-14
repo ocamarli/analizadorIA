@@ -1,0 +1,5 @@
+Memory Management Checklist:
+- Verify all temporary structures are released.
+- Ensure dynamic DLLs are unloaded after use.
+- Test ODBC connections for proper open/close cycles.
+- Use memset/copy for initializing and cleaning structures.

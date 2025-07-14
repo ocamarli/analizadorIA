@@ -1,0 +1,7 @@
+{
+    "errors": {
+        "serviceUnavailable": "The requested service is currently unavailable. Please try again later.",
+        "accountNotAvailable": "The selected account is not available. Please contact support.",
+        "cancellationNotAllowed": "Cancellation is not allowed for this item due to restrictions."
+    }
+}

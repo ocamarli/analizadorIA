@@ -1,0 +1,227 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/27.0.9 Chrome/134.0.6998.205 Electron/35.4.0 Safari/537.36" version="27.0.9">
+  <diagram id="sequence-diagram" name="Sequence diagram">
+    <mxGraphModel dx="1188" dy="701" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="lifelineCliente" value="Cliente" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="40" y="40" width="120" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="activationCliente1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="lifelineCliente" vertex="1">
+          <mxGeometry x="55" y="150" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="activationCliente2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="lifelineCliente" vertex="1">
+          <mxGeometry x="55" y="520" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lifelineSistemaVentas" value="Sistema de Ventas" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="180" y="40" width="120" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="activationSistemaVentas1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="lifelineSistemaVentas" vertex="1">
+          <mxGeometry x="55" y="150" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="activationSistemaVentas2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="lifelineSistemaVentas" vertex="1">
+          <mxGeometry x="55" y="190" width="10" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="activationSistemaVentas3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="lifelineSistemaVentas" vertex="1">
+          <mxGeometry x="55" y="360" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="activationSistemaVentas4" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="lifelineSistemaVentas" vertex="1">
+          <mxGeometry x="55" y="520" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="activationSistemaVentas5" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="lifelineSistemaVentas" vertex="1">
+          <mxGeometry x="55" y="560" width="10" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="lifelineMicroservicioProductos" value="Microservicio de Productos" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="340" y="40" width="120" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="activationMicroservicioProductos1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="lifelineMicroservicioProductos" vertex="1">
+          <mxGeometry x="55" y="190" width="10" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lifelineMicroservicioInventario" value="Microservicio de Inventario" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="500" y="40" width="120" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="lifelineMicroservicioOrdenes" value="Microservicio de Órdenes" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="660" y="40" width="120" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="activationMicroservicioOrdenes1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="lifelineMicroservicioOrdenes" vertex="1">
+          <mxGeometry x="55" y="360" width="10" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="lifelineMicroservicioPagos" value="Microservicio de Pagos" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="820" y="40" width="120" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="activationMicroservicioPagos1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="lifelineMicroservicioPagos" vertex="1">
+          <mxGeometry x="55" y="560" width="10" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lifelineBaseDatosMongoDB" value="Base de Datos MongoDB" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;edgeStyle&quot;:&quot;elbowEdgeStyle&quot;,&quot;elbow&quot;:&quot;vertical&quot;,&quot;curved&quot;:0,&quot;rounded&quot;:0};fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="980" y="40" width="120" height="900" as="geometry" />
+        </mxCell>
+        <mxCell id="activationBaseDatosMongoDB1" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="lifelineBaseDatosMongoDB" vertex="1">
+          <mxGeometry x="55" y="200" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="activationBaseDatosMongoDB2" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="lifelineBaseDatosMongoDB" vertex="1">
+          <mxGeometry x="55" y="400" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="activationBaseDatosMongoDB3" value="" style="html=1;points=[];perimeter=orthogonalPerimeter;" parent="lifelineBaseDatosMongoDB" vertex="1">
+          <mxGeometry x="55" y="600" width="10" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="msg1" value="seleccionarProducto(idProducto)" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;" parent="1" source="lifelineCliente" target="lifelineSistemaVentas" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="160" as="sourcePoint" />
+            <mxPoint x="235" y="160" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg2" value="consultarProducto(idProducto)" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;" parent="1" source="lifelineSistemaVentas" target="lifelineMicroservicioProductos" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="235" y="180" as="sourcePoint" />
+            <mxPoint x="395" y="180" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg3" value="buscarProducto(id)" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;" parent="1" source="lifelineMicroservicioProductos" target="lifelineBaseDatosMongoDB" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="395" y="220" as="sourcePoint" />
+            <mxPoint x="1035" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg4" value="return datosProducto" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#000000;dashed=1;" parent="1" source="lifelineBaseDatosMongoDB" target="lifelineMicroservicioProductos" edge="1">
+          <mxGeometry x="0.1234" y="-60" relative="1" as="geometry">
+            <mxPoint x="1035" y="240" as="sourcePoint" />
+            <mxPoint x="395" y="240" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="720" y="480" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg5" value="return infoProducto" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#000000;dashed=1;" parent="1" edge="1">
+          <mxGeometry x="-0.7562" y="30" relative="1" as="geometry">
+            <mxPoint x="399.5" y="530" as="sourcePoint" />
+            <mxPoint x="239.5" y="530" as="targetPoint" />
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg6" value="agregarProductoCarrito(infoProducto)" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;" parent="1" source="lifelineCliente" target="lifelineSistemaVentas" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="380" as="sourcePoint" />
+            <mxPoint x="235" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg7" value="crearOrden(infoProducto)" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;" parent="1" edge="1">
+          <mxGeometry x="0.0854" y="-70" relative="1" as="geometry">
+            <mxPoint x="190" y="550" as="sourcePoint" />
+            <mxPoint x="670" y="550" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="130.5" y="740" />
+            </Array>
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg8" value="guardarOrden(nuevaOrden)" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;" parent="1" source="lifelineMicroservicioOrdenes" target="lifelineBaseDatosMongoDB" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="715" y="440" as="sourcePoint" />
+            <mxPoint x="1035" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg9" value="confirmaciónOrden" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#000000;dashed=1;" parent="1" source="lifelineBaseDatosMongoDB" target="lifelineMicroservicioOrdenes" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1035" y="480" as="sourcePoint" />
+            <mxPoint x="715" y="480" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg10" value="return ordenCreada" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#000000;dashed=1;" parent="1" source="lifelineMicroservicioOrdenes" target="lifelineSistemaVentas" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="715" y="520" as="sourcePoint" />
+            <mxPoint x="235" y="520" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="630" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg11" value="realizarPago(datosPago)" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;" parent="1" source="lifelineCliente" target="lifelineSistemaVentas" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="95" y="580" as="sourcePoint" />
+            <mxPoint x="235" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg12" value="procesarPago(datosPago)" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;" parent="1" source="lifelineSistemaVentas" target="lifelineMicroservicioPagos" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="235" y="600" as="sourcePoint" />
+            <mxPoint x="875" y="600" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="370" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg13" value="registrarPago(pago)" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=block;strokeColor=#000000;" parent="1" source="lifelineMicroservicioPagos" target="lifelineBaseDatosMongoDB" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="875" y="640" as="sourcePoint" />
+            <mxPoint x="1035" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg14" value="confirmaciónPago" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#000000;dashed=1;" parent="1" source="lifelineBaseDatosMongoDB" target="lifelineMicroservicioPagos" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1035" y="680" as="sourcePoint" />
+            <mxPoint x="875" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg15" value="return resultadoPago" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#000000;dashed=1;" parent="1" edge="1">
+          <mxGeometry x="1" y="-240" relative="1" as="geometry">
+            <mxPoint x="870" y="340" as="sourcePoint" />
+            <mxPoint x="230" y="340" as="targetPoint" />
+            <mxPoint x="-69" y="10" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msg16" value="return confirmaciónCompra" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#000000;dashed=1;" parent="1" source="lifelineSistemaVentas" target="lifelineCliente" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="235" y="760" as="sourcePoint" />
+            <mxPoint x="95" y="760" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="frameAltProductoNoEncontrado" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=600;height=120;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="200" y="1040" width="600" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="condicionErrorProductoNoEncontrado" value="[Producto no encontrado]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="frameAltProductoNoEncontrado" vertex="1">
+          <mxGeometry x="10" y="20" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="msgErrorProductoNoEncontradoReturn" value="return mensajeErrorProductoNoEncontrado" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#b85450;dashed=1;" parent="1" source="lifelineMicroservicioProductos" target="lifelineSistemaVentas" edge="1">
+          <mxGeometry x="-0.5062" y="-60" relative="1" as="geometry">
+            <mxPoint x="395" y="280" as="sourcePoint" />
+            <mxPoint x="235" y="280" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="310" y="630" />
+            </Array>
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msgErrorProductoNoEncontradoSistemaVentasReturnCliente" value="return mensajeErrorProductoNoEncontrado" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#b85450;dashed=1;" parent="1" edge="1">
+          <mxGeometry x="-0.7143" y="-110" relative="1" as="geometry">
+            <mxPoint x="230" y="550" as="sourcePoint" />
+            <mxPoint x="90" y="550" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="frameAltErrorPago" value="alt" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;recursiveResize=0;container=1;collapsible=0;width=600;height=120;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="820" y="600" width="600" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="condicionErrorPago" value="[Error en procesamiento de pago]" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="frameAltErrorPago" vertex="1">
+          <mxGeometry x="10" y="20" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="msgErrorPagoReturn" value="return mensajeErrorPago" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#b85450;dashed=1;" parent="1" source="lifelineMicroservicioPagos" target="lifelineSistemaVentas" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="875" y="620" as="sourcePoint" />
+            <mxPoint x="235" y="620" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="340" y="260" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="msgErrorPagoSistemaVentasReturnCliente" value="return mensajeErrorPago" style="edgeStyle=elbowEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;strokeColor=#b85450;dashed=1;" parent="1" edge="1">
+          <mxGeometry x="-0.0071" y="-190" relative="1" as="geometry">
+            <mxPoint x="230" y="390" as="sourcePoint" />
+            <mxPoint x="90" y="390" as="targetPoint" />
+            <mxPoint x="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

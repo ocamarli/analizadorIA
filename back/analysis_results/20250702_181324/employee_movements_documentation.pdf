@@ -1,0 +1,9 @@
+Employee Movements Logic
+
+1. Employees with blocked current accounts: Refund goes to the current account.
+2. Employees with less than the required tenure for current account activation: Refund goes to additional savings.
+3. Ex-employees: Notify HR for manual refund processing.
+
+Error Handling:
+- Log all errors during migration.
+- Notify the admin for manual intervention if errors persist.

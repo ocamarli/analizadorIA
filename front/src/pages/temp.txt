@@ -1,0 +1,29 @@
+    if (type==="single"){
+        setData{
+        id_parameter: idParameter,
+        name: name,
+        description: description,
+        multiplicate: multiplicate,
+        number_bytes: numberBytes,
+        value: value,       
+        unit: unit,
+        type: type,
+        min_val:minVal,
+        max_val:maxVal,
+        
+        
+      };
+    }
+    else{
+        data = {
+        id_parameter: idParameter,
+        name: name,
+        description: description,
+        multiplicate: multiplicate,
+        number_bytes: numberBytes,
+        value: value,
+        unit: unit,
+        type: type,
+
+      };      
+    }
