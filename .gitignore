@@ -1,0 +1,23 @@
+
+# Frontend (React)
+front/node_modules/
+front/build/
+front/dist/
+front/.env
+front/.env.local
+
+# Backend (Python)
+back/__pycache__/
+back/*.pyc
+back/venv/
+back/env/
+back/.venv/
+back/.env
+back/instance/
+back/.pytest_cache/
+
+# General
+.DS_Store
+*.log
+.vscode/
+.idea/
